@@ -98,12 +98,17 @@ body::before {
 }
 
 .menu ul li a {
-    color: #fff;
+    color: #000;
     text-decoration: none;
-    font-weight: 400;
+    font-weight: 500;
     font-size: 0.9rem;
     padding: 4px 6px;
     transition: 0.3s;
+}
+
+.titulo a img,
+.inicio {
+    border: none;
 }
 
 .menu ul li a:hover {
@@ -142,12 +147,12 @@ body::before {
     width: 200px;
     height: auto;
     margin-bottom: 20px;
-    transition: 0.3s ease;
+    transition: transform 0.3s ease, filter 0.3s ease;
 }
 
 .logo:hover {
     transform: scale(1.05);
-    transition: 0.3s;
+    filter: drop-shadow(0 0px 20px rgba(0, 0, 0, 0.4));
     cursor: pointer;
 }
 
@@ -169,22 +174,30 @@ body::before {
     cursor: pointer;
 }
 
-.container-direita {
+.container {
     color: #000000;
-    font-size: 1.2rem;
-    font-weight: 700;
-    position: absolute;
-    right: 50px;
-    max-width: 200px;
-    margin: 0 auto;
-    padding: 0 20px;
+    text-decoration: none;
+    border: none;
+    max-width: 500px;
     opacity: 0.2;
 }
 
-.container-direita:hover {
+.container:hover {
     opacity: 0.4;
     transition: 0.3s ease;
     cursor: pointer;
+}
+
+.container-bill a {
+    color: #000000;
+    text-decoration: none;
+}
+
+.container-bill a:hover,
+.container-bill a:focus,
+.container-bill a:active {
+    color: #000000;
+    text-decoration: none;
 }
 
 .simbolo {
@@ -198,6 +211,39 @@ body::before {
 }
 
 .simbolo img {
-    width: 700px;
+    width: 600px;
     height: auto;
+}
+
+.livro img {
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 300px;
+    height: auto;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.nota {
+    background-image: url(/landing-page-livro/imagens_livro/textura3.png);
+    max-width: 40rem;
+    margin: 0 auto;
+    padding: 20px;
+    border-radius: 2rem;
+}
+
+.conteudo_nota {
+    color: #000000;
+    font-size: 1.2rem;
+    font-weight: 500;
+    text-align: left;
+}
+
+.titulo_nota {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 10px;
 }
