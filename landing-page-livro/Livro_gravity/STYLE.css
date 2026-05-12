@@ -7,6 +7,15 @@
     --fonte-rabisco: 'Fredericka the Great', cursive;
 }
 
+h2 {
+    font-size: 2rem;
+    font-family: var(--fonte-rabisco);
+    font-weight: 500;
+    color: var(--cor-capa-do-livro);
+    text-decoration: none;
+    letter-spacing: -0.03rem;
+}
+
 body {
     font-family: Arial, sans-serif;
     position: relative;
@@ -101,19 +110,11 @@ body::before {
     color: #f1c40f;
 }
 
-.navbar-logo {
-    font-size: 2rem;
-    font-family: var(--fonte-rabisco);
-    font-weight: 500;
-    color: var(--cor-capa-do-livro);
-    text-decoration: none;
-    letter-spacing: -0.03rem;
-}
 
 .inicio {
     position: absolute;
     left: 10px;
-    top: 5%;
+    top: 50px;
     height: 100px;
     width: auto;
     z-index: 1001;
@@ -151,6 +152,9 @@ body::before {
 }
 
 .container-esquerda {
+    color: #000000;
+    font-size: 1.2rem;
+    font-weight: 700;
     position: absolute;
     left: 50px;
     max-width: 200px;
@@ -166,6 +170,9 @@ body::before {
 }
 
 .container-direita {
+    color: #000000;
+    font-size: 1.2rem;
+    font-weight: 700;
     position: absolute;
     right: 50px;
     max-width: 200px;
@@ -178,4 +185,19 @@ body::before {
     opacity: 0.4;
     transition: 0.3s ease;
     cursor: pointer;
+}
+
+.simbolo {
+    position: fixed;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+    opacity: 0.1;
+    pointer-events: none;
+}
+
+.simbolo img {
+    width: 700px;
+    height: auto;
 }
