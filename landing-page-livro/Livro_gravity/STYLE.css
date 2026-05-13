@@ -1,9 +1,8 @@
-* {}
-
 :root {
     --cor-principal: #a37c22;
     --cor-capa-do-livro: #540000;
     --cor-fundo: #f4dbab;
+    --cor-fundo-bill: #3b3b3b;
     --fonte-rabisco: 'Fredericka the Great', cursive;
 }
 
@@ -17,14 +16,15 @@ h2 {
 }
 
 body {
+    height: 100vh;
     font-family: Arial, sans-serif;
     position: relative;
     z-index: 1;
-    min-height: 100vh;
     background-color: var(--cor-fundo);
-    overflow-x: hidden;
+    overflow: hidden;
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
 body::before {
@@ -40,6 +40,12 @@ body::before {
     opacity: 0.9;
     mix-blend-mode: multiply;
     transition: opacity 0.5s ease;
+}
+
+main {
+    height: 100vh;
+    width: 100%;
+    overflow: hidden;
 }
 
 /* TOPO COM IMAGEM */
@@ -70,6 +76,7 @@ body::before {
 /* MENU */
 .menu {
     position: fixed;
+    z-index: 2;
     top: 0;
     left: 0;
     background-color: var(--cor-principal);
@@ -78,7 +85,7 @@ body::before {
     flex-direction: column;
     align-items: center;
     padding: 6px 0 4px;
-    border-bottom: #000000 2px solid;
+    border-bottom: #000000 3px solid;
 }
 
 .menu ul {
@@ -131,7 +138,6 @@ body::before {
     background-position: center;
     background-repeat: no-repeat;
     width: 100%;
-    min-height: 100vh;
     height: 100vh;
     display: flex;
     flex-direction: column;
@@ -144,7 +150,11 @@ body::before {
 }
 
 .logo {
-    width: 200px;
+    z-index: 1;
+    position: absolute;
+    top: 160px;
+    left: 600px;
+    width: 600px;
     height: auto;
     margin-bottom: 20px;
     transition: transform 0.3s ease, filter 0.3s ease;
@@ -213,6 +223,180 @@ body::before {
 .simbolo img {
     width: 600px;
     height: auto;
+}
+
+.topo_bill {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 10;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.titulo_bill {
+    background-color: #3b3b3b;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: 6px 15px;
+    gap: 10px;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.menu_bill {
+    position: fixed;
+    z-index: 2;
+    top: 0;
+    left: 0;
+    background-color: var(--cor-fundo-bill);
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 6px 0 4px;
+    border-bottom: #000000 3px solid;
+}
+
+.menu_bill ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    white-space: nowrap;
+    padding: 8px 10px;
+    width: 100%;
+    max-width: 1100px;
+    font-size: 0.9rem;
+}
+
+.menu_bill ul li {
+    margin: 0 15px;
+}
+
+.menu_bill ul li a {
+    color: #000000;
+    text-decoration: none;
+    font-weight: 400;
+    font-size: 0.9rem;
+    padding: 4px 6px;
+    transition: 0.3s;
+}
+
+.menu_bill ul li a:hover {
+    color: #f1c40f;
+}
+
+.inicio_bill {
+    position: absolute;
+    left: 10px;
+    top: 50px;
+    height: 100px;
+    width: auto;
+    z-index: 1001;
+}
+
+.entrada_bill {
+    background-image: url("../imagens_livro/textura4.png");
+    background-size: cover;
+    background-position: center top;
+    background-repeat: no-repeat;
+    width: 100%;
+    min-height: 100vh;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    text-align: center;
+    margin-top: 0;
+    padding: 130px 0 60px;
+    box-sizing: border-box;
+}
+
+.logo_bill {
+    width: 200px;
+    height: auto;
+    margin-bottom: 20px;
+    transition: 0.3s ease;
+}
+
+.logo_bill:hover {
+    transform: scale(1.05);
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.container_bill {
+    color: #000000;
+    font-size: 1.2rem;
+    font-weight: 700;
+    position: absolute;
+    right: 50px;
+    max-width: 200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    opacity: 0.2;
+}
+
+.container_bill:hover {
+    opacity: 0.4;
+    transition: 0.3s ease;
+    cursor: pointer;
+}
+
+.simbolo_bill {
+    position: fixed;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+    opacity: 0.1;
+    pointer-events: none;
+}
+
+.simbolo img {
+    width: 700px;
+    height: auto;
+}
+
+.footer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: var(--cor-principal);
+    justify-content: space-between;
+    z-index: 10;
+    display: flex;
+    border-top: #000000 3px solid;
+}
+
+.footer a {
+    text-decoration: none;
+    border: none;
+}
+
+.footer_bill {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: var(--cor-fundo-bill);
+    justify-content: space-between;
+    z-index: 10;
+    display: flex;
+    border-top: #000000 3px solid;
+}
+
+.footer_bill a {
+    text-decoration: none;
+    border: none;
 }
 
 .livro img {
