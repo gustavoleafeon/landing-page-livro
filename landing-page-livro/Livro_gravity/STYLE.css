@@ -263,7 +263,6 @@ main {
     background-color: #3b3b3b;
     width: 100%;
     display: flex;
-    flex-direction: column;
     align-items: center;
     justify-content: space-between;
     padding: 4px 12px;
@@ -469,6 +468,7 @@ main {
     height: auto;
     align-items: center;
     justify-content: center;
+    border-radius: 1rem;
 
 }
 
@@ -522,52 +522,4 @@ main {
     font-weight: 500;
     transition: 0.3s ease;
     margin: 0 auto;
-}
-
-.folha-agradecimentos {
-    background-image: url("../imagens_livro/texturafolha1.png");
-    z-index: 1000;
-    max-width: 530px;
-    max-height: 736px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-}
-
-.folha-personagens {
-    background-image: url("../imagens_livro/texturafolha1.png");
-    z-index: 1001;
-    max-width: 530px;
-    max-height: 736px;
-}
-
-.folha-personagens p {
-    color: #000000;
-    line-height: 1.5rem;
-    font-size: 1.2rem;
-    font-weight: 500;
-    text-align: left;
-    padding: 20px;
-}
-
-.folha-autor {
-    background-image: url("../imagens_livro/texturafolha1.png");
-    z-index: 1002;
-    max-width: 530px;
-    max-height: 736px;
-}
-
-.folha-universo {
-    background-image: url("../imagens_livro/texturafolha1.png");
-    z-index: 10;
-    max-width: 530px;
-    max-height: 736px;
-}
-
-.folha-serie {
-    background-image: url("../imagens_livro/texturafolha1.png");
-    z-index: 10;
-    max-width: 530px;
-    max-height: 736px;
 }
